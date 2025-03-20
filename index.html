@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gelir-Gider Takibi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Gelir-Gider Takibi</h1>
+  </header>
+
+  <main class="container">
+    <!-- Form Alanı -->
+    <section class="form-section">
+      <h2>Yeni İşlem Ekle</h2>
+      <form id="transaction-form">
+        <input 
+          type="text" 
+          id="description" 
+          placeholder="Açıklama" 
+          required
+        />
+        <input 
+          type="number" 
+          id="amount" 
+          placeholder="Tutar" 
+          required
+        />
+        <select id="type">
+          <option value="gelir">Gelir</option>
+          <option value="gider">Gider</option>
+        </select>
+        <button type="submit" class="btn">Ekle</button>
+      </form>
+    </section>
+
+    <!-- İşlem Geçmişi -->
+    <section class="history-section">
+      <h2>İşlem Geçmişi</h2>
+      <ul id="transaction-list"></ul>
+    </section>
+
+    <!-- Bakiye Alanı -->
+    <section class="balance-section">
+      <h2>Bakiye</h2>
+      <div class="balance-container">
+        <span id="balance">0</span> <span class="currency">₺</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>s
